@@ -1,12 +1,15 @@
 name: Staging
 
 on:
-  push:
-    branches:
-      - develop
+  workflow_dispatch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - run: echo "Deploying to Staging"
+      - name: Set Version
+        run: export MY_VERSION="v1.5.0"
+
+      - name: Print Version
+        run: echo "The version is $MY_VERSION"
