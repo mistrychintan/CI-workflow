@@ -19,7 +19,7 @@ jobs:
         node-version: [18, 20, 22]
         exclude:
           - os: windows-latest
-            node-version: [18, 22]
+            node-version: [20, 22]
             
     steps: 
       - name:  Checkout Code
